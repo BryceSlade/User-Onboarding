@@ -1,13 +1,7 @@
 import React from 'react'
 
 export default function FriendForm(props) {
-  const {
-    values,
-    submit,
-    change,
-    disabled,
-    errors,
-  } = props
+  const {values, submit, change, disabled, errors,} = props
 
   const onSubmit = evt => {
     evt.preventDefault()

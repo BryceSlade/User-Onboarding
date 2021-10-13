@@ -18,7 +18,7 @@ const initialFormErrors = {
   name: '',
   email: '',
   password: '',
-  terms: false
+  // terms: false
 }
 
 const initialUsers = []
@@ -69,10 +69,7 @@ function App() {
 
   const inputChange = (name, value) => {
     validate(name, value)
-    setFormValues({
-      ...formValues,
-      [name]: value
-    })
+    setFormValues({...formValues, [name]: value})
   }
 
   const formSubmit = () => {
