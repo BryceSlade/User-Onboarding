@@ -78,4 +78,24 @@ describe('New User Application', () => {
         })
     })
 
+    describe('Testing validation', () => {
+        it('Button starts disabled', () => {
+            submitBtn()
+                .should('be.disabled');
+            nameInput()
+                .should('have.value', '')
+                .type('Bryce');
+            emailInput()
+                .should('have.value', '')
+                .type('Bryce@gmail.com');
+            passwordInput()
+                .should('have.value', '')
+                .type('Hello123!');
+            termsBox()
+                .check();
+            submitBtn()
+                .click();
+        })
+    })
+
 })
